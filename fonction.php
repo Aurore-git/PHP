@@ -17,7 +17,7 @@
     <p>Faire une fonction qui retourne true. </p>
 
     <?php
-    function ex1() : bool {
+    function ex1(){
     return true;
     }
     ?>
@@ -28,7 +28,7 @@
     <p>Faire une fonction qui prend en paramètre une chaine de caractères et qui retourne cette même chaine </p>
 
     <?php
-    function ex2(string $str) : string {
+    function ex2($str) {
     return $str;
     }
     ?>
@@ -39,7 +39,7 @@
     <p>Faire une fonction qui prend en paramètre deux chaines de caractères et qui renvoit la concaténation de ces deux chaines.</p>
 
     <?php
-    function ex3(string $str1, string $str2) : string {
+    function ex3( $str1,  $str2)  {
         return $str1 . $str2;
     }
     ?>
@@ -52,7 +52,7 @@
     => Les deux nombres sont identiques si les deux nombres sont égaux</p>
 
     <?php
-    function ex4(int $a, int $b) : string {
+    function ex4( $a,  $b) {
         if ($a < $b) {
             return "$a plus petit que $b";
         }
@@ -61,20 +61,7 @@
         }
         return "$a égal à $b";
     }
-    
-    function ex4bis(int $a, int $b): string
-    {
-        if ($a === $b) return "$a égal à $b";
-        return ($a < $b) ? "$a plus petit que $b" : "$a plus grand que $b";
-    }
-    
-    var_dump(ex4(12, 23));
-    var_dump(ex4bis(12, 23));
-    var_dump(ex4(23, 12));
-    var_dump(ex4bis(23, 12));
-    var_dump(ex4(12, 12));
-    var_dump(ex4bis(12, 12));
-
+  
     ?>
 
 <!--Exercice 5-->
@@ -82,7 +69,7 @@
     <p>Faire une fonction qui prend en paramètre un nombre et une chaine de caractères et qui renvoit la concaténation de ces deux paramètres. </p>
 
     <?php
-        function ex5(int $int1, string $str1): string
+        function ex5( $int1, $str1)
     {
         return $int1 . $str1;
     }
@@ -94,12 +81,20 @@
     Elle doit renvoyer une chaine de la forme : "Bonjour" + nom + prenom + ", tu as " + age + "ans".</p>
 
     <?php
-    function ex6( string $nom,
-    string $prenom,
-    string $age) : string
-    {
-    return "Bonjour $nom $prenom, tu as $age ans.";
-    }
+    $nom = 'Malochet';
+    $prenom = 'Aurore';
+    $age = 41;
+
+    function ex6 (
+        $nom,
+        $prenom,
+        $age)
+
+        {
+        return "Bonjour $nom $prenom, tu as $age ans.";
+        }
+
+        echo "Bonjour $nom $prenom, tu as $age ans."
     ?>
 
 <!--Exercice 7-->
@@ -113,20 +108,17 @@
     => Vous êtes une femme et vous êtes mineur</p>
 
     <?php
-    function ex7(int $age, string $sexe) : string {
+    function ex7( $age,  $genre)
+    
+    {
     $ageString = "vous êtes majeur";
     if ($age <= 18) {
         $ageString = "vous êtes mineur";
     }
 
-    $sexeString = "homme";
-    $accord = "";
-    if ($sexe === "f") {
-        $sexeString = "femme";
-        $accord = "e";
-    }
+   
 
-    return("Vous êtes un" . $accord . " " . $sexeString . " et " . $ageString . $accord);
+    
 
     }
     ?>
@@ -137,12 +129,19 @@
     Tous les paramètres doivent avoir une valeur par défaut.</p>
 
     <?php
-    function ex8(int $a = 12,int $b = 13, int $c = 14) : int {
-        return $a + $b + $c;
+    $a = 2;
+    $b = 3;
+    $c = 4;
+
+    function multecho(int $a, int $b, int $c){
+        echo $a. ' + ' .$b. ' + '.$c. ' = ' .$a + $b + $c. '<br/>';
     }
+    
+    function multreturn(int $a, int $b, int $c){
+        return $a. ' + ' .$b. ' + ' .$c. ' = ' .$a + $b + $c. '<br/>';
+    }
+
     ?>
 
-    
-    
 </body>
 </html>
