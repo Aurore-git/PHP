@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<h1>Tp php</h1>
+<h1>TP PHP</h1>
 <h2>Les boucles</h2>
 
 
@@ -38,8 +38,9 @@
 
     $a = 0;
     $b = 9;
+
     while ($a <= 20) {
-        var_dump($a*$b);
+        echo $a * $b ;
         $a++;
     }
     ?>
@@ -56,7 +57,7 @@
     $b = 23;
 
     while ($a >= 10) {
-        var_dump($a * $b);
+        echo $a * $b ; 
         $a--;
     }
     ?>
@@ -69,7 +70,7 @@
 
     <?php
     for($i = 1; $i <= 10; $i += $i/2 ) {
-        var_dump($i);
+        echo $i ;
     }
     ?>
 
@@ -79,7 +80,7 @@
     
     <?php
     for($i = 1; $i <= 15; $i++) {
-        var_dump('on y arrive presque');
+        echo 'on y arrive presque <br />';
     }
     ?>
 
@@ -89,7 +90,7 @@
 
     <?php
     for($i = 20; $i >= 1; $i--) {
-    var_dump("C'est presque bon");
+    echo 'C\'est presque bon <br />';
     }
     ?>
 
@@ -98,8 +99,8 @@
     <p>En allant de 1 à 100 avec un pas de 15, afficher le message On tient le bon bout...</p>
 
     <?php
-    for($i=1; $i >= 100; $i += 15) {
-        var_dump('On tient le bon bout');
+    for($i=1; $i <= 100; $i += 15) {
+        echo 'On tient le bon bout <br/>';
     }
     ?>
 
@@ -109,7 +110,7 @@
 
     <?php
     for($i=200; $i>=0; $i -= 12)  {
-        var_dump('enfin !!!');
+        echo('enfin !!!<br/>');
     }
     ?>
 
