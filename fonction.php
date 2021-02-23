@@ -28,9 +28,13 @@
     <p>Faire une fonction qui prend en paramètre une chaine de caractères et qui retourne cette même chaine </p>
 
     <?php
+    $str = "J'ai 41 ans";
+
     function ex2($str) {
     return $str;
     }
+
+    echo $str;
     ?>
 
 
@@ -39,9 +43,14 @@
     <p>Faire une fonction qui prend en paramètre deux chaines de caractères et qui renvoit la concaténation de ces deux chaines.</p>
 
     <?php
+    $str1 = "J'ai 41 ans";
+    $str2 = "Je suis une femme";
+
     function ex3( $str1,  $str2)  {
         return $str1 . $str2;
     }
+
+    echo $str1 , $str2;
     ?>
 
 <!--Exercice 4-->
@@ -69,10 +78,15 @@
     <p>Faire une fonction qui prend en paramètre un nombre et une chaine de caractères et qui renvoit la concaténation de ces deux paramètres. </p>
 
     <?php
+    $int1 = 15;
+    $str1 = "Il fait beau auj";
+
         function ex5( $int1, $str1)
     {
         return $int1 . $str1;
     }
+
+    echo $int1, $str1;
     ?>
 
 <!--Exercice 6-->
@@ -134,11 +148,11 @@
     $c = 4;
 
     function multecho(int $a, int $b, int $c){
-        echo $a. ' + ' .$b. ' + '.$c. ' = ' .$a + $b + $c. '<br/>';
+        echo $a  +  $b + $c  =  '$a + $b + $c <br/>';
     }
     
     function multreturn(int $a, int $b, int $c){
-        return $a. ' + ' .$b. ' + ' .$c. ' = ' .$a + $b + $c. '<br/>';
+        return $a + $b + $c = ' $a + $b + $c <br/>';
     }
 
     ?>
